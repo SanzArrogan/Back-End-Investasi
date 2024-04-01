@@ -1,0 +1,66 @@
+<!-- views/pitcher.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0 auto;
+            padding: 20px;
+            width: 80%;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin-top: 10px;
+            display: block;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Salurkan ide anda</h1>
+    <form action="/submit" method="POST">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="phone">Nomor Telepon:</label>
+        <input type="text" id="phone" name="phone" required>
+        
+        <label for="idea">Ide:</label>
+        <textarea id="idea" name="idea" rows="4" required></textarea>
+        
+        <label for="funding">Dana yang dibutuhkan:</label>
+        <input type="text" id="funding" name="funding" required>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

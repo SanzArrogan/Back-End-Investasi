@@ -1,0 +1,23 @@
+<!-- views/investor.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideas</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <h1>Ideas</h1>
+    <ul>
+        <% ideas.forEach(idea => { %>
+            <li>
+                <strong><%= idea.nomor %>: <%= idea.nama %></strong>
+                <p><%= idea.ide %></p>
+                <p><%= idea.dana %></p>
+            </li>
+        <% }); %>
+    </ul>
+    <a href="/ideas/new">New Idea</a>
+</body>
+</html>
